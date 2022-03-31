@@ -1,2 +1,3 @@
-id	name	type	description	imagepath	attack	defense	mana
-1	Creeper	OVERWORLD	A creeper is a common hostile mob that silently approaches players and explodes.	src/res/image/character/Creeper.png	13	7	5
+id	name	type	description	imagepath	attack	health	mana  attackUp  healthUp
+1	Creeper	OVERWORLD	A creeper is a common hostile mob that silently approaches players and explodes.	src/res/image/character/Creeper.png	13	7	5 1 1
+2 Sheep OVERWORLD Measly unshaven sheep.  1 1 1 0 0
