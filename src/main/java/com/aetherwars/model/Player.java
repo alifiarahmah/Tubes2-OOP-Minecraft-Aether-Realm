@@ -1,5 +1,6 @@
 package com.aetherwars.model;
 import com.aetherwars.card.Card;
+import com.aetherwars.card.Character.Character;
 public class Player {
     private String name;
     private int HP ;
