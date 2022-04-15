@@ -26,6 +26,9 @@ public class Character extends Card {
   public int getExp(){
     return this.exp;
   }
+  public void setExp(int exp){
+    this.exp = exp;
+  }
   public int getMaxExpToNextLevel(){
     return this.maxExpToNextLevel;
   }
