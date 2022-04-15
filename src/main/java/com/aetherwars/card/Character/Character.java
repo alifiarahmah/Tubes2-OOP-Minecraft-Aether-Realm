@@ -7,8 +7,10 @@ public class Character extends Card {
   private int exp;
   private int maxExpToNextLevel;
   private int level;
+  private int atk_0; //Simpan baseAttack saat level 1 (Nilai tidak akan pernah berubah)
   private int attack; // Wajib
   private int attackUp;
+  private float hp_0; // Simpan baseHealth saat level 1 (Nilai tidak akan pernah berubah)
   private float health; // Wajib
   private int healthUp;
 
@@ -18,8 +20,10 @@ public class Character extends Card {
     this.exp = 0;
     this.level = 1;
     this.maxExpToNextLevel = 1;
+    this.atk_0 = attack;
     this.attack = attack;
     this.attackUp = attackUp;
+    this.hp_0 = health;
     this.health = health;
     this.healthUp = healthUp;
   }
@@ -58,8 +62,8 @@ public class Character extends Card {
       this.level += 1;
       this.exp -= this.maxExpToNextLevel;
       this.maxExpToNextLevel += 2;
-      this.attack += this.attackUp;
-      this.health += this.healthUp;
+      this.attack = this.atk_0 + (this.attackUp * (this.level - 1));
+      this.health = this.hp_0 + (this.healthUp * (this.level - 1));
     }
   }
   public void attack(Character character){
