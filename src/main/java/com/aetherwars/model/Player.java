@@ -1,4 +1,5 @@
 package com.aetherwars.model;
+import com.aetherwars.card.Card;
 public class Player {
     private String name;
     private int HP ;
@@ -15,10 +16,29 @@ public class Player {
         this.handCard = new Card[5];
         this.onBoardCard = new Character[5];
     }
-    public void attack(){
+    public void attack(Player p,Character c){
+        if(p.getBoardCharacter().length>0){
+            //ada karakter di board lawan
+            //hanya bisa serang karakter
+        }
+        else{
+            //gak ada karakter di board lawan
+            //bisa langsung serang hp
 
+            //p.setHP(p.getHP()-c.getATK())
+        }
     }
     public void setMaxMana(){
-
+        this.maxMana++;
     }
+    public Character[] getBoardCharacter(){
+        return this.onBoardCard;
+    }
+    public void setHP(int hp){
+        this.HP = hp;
+    }
+    public int getHP(){
+        return this.HP;
+    }
+
 }
