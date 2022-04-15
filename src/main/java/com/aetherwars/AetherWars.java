@@ -24,7 +24,7 @@ public class AetherWars extends Application {
     characterReader.setSkipHeader(true);
     List<String[]> characterRows = characterReader.read();
     for (String[] row : characterRows) {
-      Character c = new Character(row[1], row[3], Type.valueOf(row[2]));
+      Character c = new Character(Integer.parseInt(row[0]), row[3], Type.valueOf(row[2]));
       System.out.println(c);
     }
   }

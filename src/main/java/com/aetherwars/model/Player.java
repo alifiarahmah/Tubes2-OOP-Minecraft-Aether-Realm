@@ -1,6 +1,7 @@
 package com.aetherwars.model;
 import com.aetherwars.card.Card;
 import com.aetherwars.card.Character.Character;
+
 public class Player {
     private String name;
     private int HP ;
@@ -17,16 +18,16 @@ public class Player {
         this.handCard = new Card[5];
         this.onBoardCard = new Character[5];
     }
-    public void attack(Player p,Character c){
-        if(p.getBoardCharacter().length>0){
+    public void attack(Player p,Character c_self,Character c_enemy){
+        if(c_enemy!=null){
             //ada karakter di board lawan
             //hanya bisa serang karakter
+            c_self.attack(c_enemy);
         }
         else{
             //gak ada karakter di board lawan
             //bisa langsung serang hp
-
-            //p.setHP(p.getHP()-c.getATK())
+            p.setHP(Math.max(p.getHP()-c_self.getAttack(),0));
         }
     }
     public void setMaxMana(){
