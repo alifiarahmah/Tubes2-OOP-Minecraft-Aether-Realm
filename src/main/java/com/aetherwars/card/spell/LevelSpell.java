@@ -5,7 +5,7 @@ import com.aetherwars.card.Card;
 public class LevelSpell extends Spell {
     private int levelChange;
 
-    public LevelSpell(int id, String name, int mana, String description, int imagepath, int levelChange) {
+    public LevelSpell(int id, String name, int mana, String description, String imagepath, int levelChange) {
         super(id, name, mana, description, imagepath);
         this.levelChange = levelChange;
     }

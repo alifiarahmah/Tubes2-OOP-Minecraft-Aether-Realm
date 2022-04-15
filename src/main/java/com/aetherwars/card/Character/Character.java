@@ -12,7 +12,7 @@ public class Character extends Card {
   private float health; // Wajib
   private int healthUp;
 
-  public Character(int id, String name, int mana, String description, int imagepath, Type element, int attack, int attackUp, float health, int healthUp) {
+  public Character(int id, String name, int mana, String description, String imagepath, Type element, int attack, int attackUp, float health, int healthUp) {
     super(id, name, mana, description, imagepath);
     this.type = element;
     this.exp = 0;

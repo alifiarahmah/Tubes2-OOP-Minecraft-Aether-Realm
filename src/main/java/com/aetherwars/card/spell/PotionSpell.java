@@ -7,7 +7,7 @@ public class PotionSpell extends Spell {
     private int health;
     private int duration;
 
-    public PotionSpell(int id, String name, int mana, String description, int imagepath, int attack, int health, int duration) {
+    public PotionSpell(int id, String name, int mana, String description, String imagepath, int attack, int health, int duration) {
         super(id, name, mana, description, imagepath);
         this.attack = attack;
         this.health = health;

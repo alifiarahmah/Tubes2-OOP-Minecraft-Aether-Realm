@@ -5,9 +5,9 @@ public class Card {
     private String name;
     private int mana;
     private String description;
-    private int imagepath;
+    private String imagepath;
 
-    public Card(int id, String name, int mana, String description, int imagepath) {
+    public Card(int id, String name, int mana, String description, String imagepath) {
         this.id = id;
         this.name = name;
         this.mana = mana;
@@ -47,11 +47,11 @@ public class Card {
         this.description = description;
     }
 
-    public int getImagepath() {
+    public String getImagepath() {
         return imagepath;
     }
 
-    public void setImagepath(int imagepath) {
+    public void setImagepath(String imagepath) {
         this.imagepath = imagepath;
     }
 }
