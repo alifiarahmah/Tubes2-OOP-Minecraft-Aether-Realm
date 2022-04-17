@@ -1,4 +1,4 @@
-package main.java.com.aetherwars.GUI.Components;
+package com.aetherwars.GUI.Components;
 
 import java.awt.Component;
 

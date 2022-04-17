@@ -17,3 +17,4 @@ id	name	description	imagepath	attack	hp	mana	duration
 116	Kordas' Curse	God of Death's most horrific curse	card/image/spell/potion/Kordas' Curse.png	-10	0	5	4
 117	SNMPTN Rejection Letter	Rejection of SNMPTN 2022	card/image/spell/potion/SNMPTN Rejection Letter.png	-2	-2	2	1
 118	SNMPTN Acceptance Letter	Acceptance of SNMPTN 2022	card/image/spell/potion/SNMPTN Acceptance Letter.png	-4	-4	4	0
+119 GWS Ticket to Doctor For Your Halu's Nakama card/image/spell/potion/GWS.png 3  -2   1   8

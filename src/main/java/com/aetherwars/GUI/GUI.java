@@ -1,3 +1,4 @@
+package com.aetherwars.GUI;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -11,7 +12,7 @@ import java.awt.FlowLayout;
 import java.awt.Dimension;
 import java.awt.Color;
 
-import main.java.com.aetherwars.GUI.Components.*;
+import com.aetherwars.GUI.Components.*;
 
 public class GUI{
     private String player1_name = "Steve";
