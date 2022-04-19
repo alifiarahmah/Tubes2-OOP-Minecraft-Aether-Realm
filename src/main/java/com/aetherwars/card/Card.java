@@ -1,11 +1,11 @@
 package com.aetherwars.card;
 
 public class Card {
-    private int id;
-    private String name;
-    private int mana;
-    private String description;
-    private String imagepath;
+    protected int id;
+    protected String name;
+    protected int mana;
+    protected String description;
+    protected String imagepath;
 
     public Card(int id, String name, int mana, String description, String imagepath) {
         this.id = id;
