@@ -1,6 +1,6 @@
 package com.aetherwars.card.spell;
 
-import com.aetherwars.card.Card;
+import com.aetherwars.card.Character.Character;
 
 public class LevelSpell extends Spell {
     private int levelChange;
@@ -18,7 +18,16 @@ public class LevelSpell extends Spell {
         this.levelChange = levelChange;
     }
 
-    public void use(Card target) {
-        // TODO: implement
+    @Override
+    public void use(Character target) {
+        /* (PERM):
+        Meningkatkan/menurunkan level dari sebuah karakter sebanyak 1 serta mereset exp (membuat exp menjadi 0).
+        Batas minimal level tetap 1 dan maksimal tetap 10. */
+
+        target.setLevel(this.getLevelChange() > 0
+                ? Math.min(target.getLevel() + this.levelChange, 10)
+                : Math.max(target.getLevel() + this.levelChange, 1)
+        );
+        target.setExp(0);
     }
 }

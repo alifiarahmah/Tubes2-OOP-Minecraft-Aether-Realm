@@ -1,6 +1,6 @@
 package com.aetherwars.card.spell;
 
-import com.aetherwars.card.Card;
+import com.aetherwars.card.Character.Character;
 
 public class PotionSpell extends Spell {
     private int attack;
@@ -38,8 +38,17 @@ public class PotionSpell extends Spell {
         this.duration = duration;
     }
 
-    public void use(Card target) {
-        // TODO: implement
-    }
+    @Override
+    public void use(Character target) {
+        /* PTN / Potion (TEMP):
+        Meningkatkan atribut attack dan / atau health.
+        Penambahan ini dapat bernilai 0 bahkan negatif.
+        Penambahan health dilakukan secara bertumpuk, sehingga serangan musuh akan
+        mengambil health dari efek potion terakhir terlebih dahulu sebelum health dari karakter
+        atau efek potion sebelumnya. Pengurangan health dapat membunuh karakter.
+        Pengurangan attack tidak akan membuat attack karakter kurang dari 0. */
 
+        target.setHealth(target.getHealth() + this.health);
+        target.setAttack(target.getAttack() + this.attack);
+    }
 }

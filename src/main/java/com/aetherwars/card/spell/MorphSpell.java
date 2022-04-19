@@ -1,6 +1,6 @@
 package com.aetherwars.card.spell;
 
-import com.aetherwars.card.Card;
+import com.aetherwars.card.Character.Character;
 
 public class MorphSpell extends Spell {
     public int target_id;
@@ -18,7 +18,15 @@ public class MorphSpell extends Spell {
         this.target_id = target_id;
     }
 
-    public void use(Card target) {
-        // TODO: implement
+    @Override
+    public void use(Character target) {
+        /* MORPH (PERM):
+        Mengubah sebuah karakter menjadi karakter lain dengan level 1 dengan exp 0.
+        Seluruh spell yang menempel akan dibuang. */
+
+        // TODO cari karakter baru dari daftar karakter
+        // Character newCharacter = search(databasekarakter, id)
+        target.setId(this.target_id);
+        /* target.setCharacter(newCharacter); */
     }
 }
