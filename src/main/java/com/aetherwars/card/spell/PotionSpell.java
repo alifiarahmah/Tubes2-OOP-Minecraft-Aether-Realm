@@ -47,8 +47,17 @@ public class PotionSpell extends Spell {
         mengambil health dari efek potion terakhir terlebih dahulu sebelum health dari karakter
         atau efek potion sebelumnya. Pengurangan health dapat membunuh karakter.
         Pengurangan attack tidak akan membuat attack karakter kurang dari 0. */
-
-        target.setHealth(target.getHealth() + this.health);
-        target.setAttack(target.getAttack() + this.attack);
+        // TODO: kalau sudah nol, balik status menjadi normal
+        // TODO: append lagi dapet efek potion swap ke target
+        /* target.setHealth(
+                this.getHealth() > 0
+                ? Math.min(target.getHealth() + this.getHealth(), target.getMaxHealth())
+                : Math.max(target.getHealth() + this.getHealth(), 0)
+        );
+        target.setAttack(
+                this.getAttack() > 0
+                ? Math.min(target.getAttack() + this.getAttack(), target.getMaxAttack())
+                : Math.max(target.getAttack() + this.getAttack(), 0)
+        ); */
     }
 }
