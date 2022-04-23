@@ -1,5 +1,7 @@
 package com.aetherwars.card;
 
+import java.util.Random;
+
 public class Deck {
     private Card[] cards;
 
@@ -27,16 +29,31 @@ public class Deck {
         }
     }
 
-    // ini masih bingung (implementasi ini ngamnbil kartu pertama yang ga kosong)
+    // Random draw card
     public Card drawCard() {
-        for (int i = 0; i < cards.length; i++) {
-            if (cards[i] != null) {
-                Card card = cards[i];
+        Random random = new Random();
+        int upperbound = cards.length;
+        int i = random.nextInt(upperbound);
+        int ctr = 0;
+        
+        Boolean found = false;
+        Card card = null;
+
+        while(!found){
+            if(cards[i] != null){
+                found = true;
+                card = cards[i];
                 cards[i] = null;
-                return card;
+                ctr++;
+            }
+            else{
+                i = random.nextInt(upperbound);
+                ctr++;
+                if(ctr == upperbound){
+                    return card;
+                }
             }
         }
-        return null;
+        return card;
     }
-
 }
