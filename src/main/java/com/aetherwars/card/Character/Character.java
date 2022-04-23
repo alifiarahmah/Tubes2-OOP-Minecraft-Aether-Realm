@@ -1,7 +1,10 @@
 package com.aetherwars.card.Character;
 
 import com.aetherwars.card.Card;
+import com.aetherwars.card.spell.Spell;
 
+import java.util.ArrayList;
+import java.util.List;
 public class Character extends Card {
   private Type type; // Wajib
   private int exp;
@@ -12,7 +15,9 @@ public class Character extends Card {
   private int attackUp;
   private float hp_0; // Simpan baseHealth saat level 1 (Nilai tidak akan pernah berubah)
   private float health; // Wajib
+  private float maxHealth;
   private int healthUp;
+  private List<Spell> activeSpells;
 
   public Character(int id, String name, int mana, String description, String imagepath, Type element, int attack, int attackUp, float health, int healthUp) {
     super(id, name, mana, description, imagepath);
@@ -25,7 +30,9 @@ public class Character extends Card {
     this.attackUp = attackUp;
     this.hp_0 = health;
     this.health = health;
+    this.maxHealth = health;
     this.healthUp = healthUp;
+    activeSpells = new ArrayList<Spell>();
   }
   public int getExp(){
     return this.exp;
@@ -54,9 +61,16 @@ public class Character extends Card {
   public void setHealth(float health){
     this.health = health;
   }
+  public float getMaxHealth(){
+    return this.maxHealth;
+  }
   public Type getType(){
     return this.type;
   }
+  public List<Spell> getActiveSpells(){
+    return this.activeSpells;
+  }
+
   public void levelUp(){
     while (this.exp >= this.maxExpToNextLevel){
       this.level += 1;
@@ -64,7 +78,12 @@ public class Character extends Card {
       this.maxExpToNextLevel += 2;
       this.attack = this.atk_0 + (this.attackUp * (this.level - 1));
       this.health = this.hp_0 + (this.healthUp * (this.level - 1));
+      this.maxHealth = this.health;
     }
+  }
+  public void addSpell(Spell spell){
+    this.activeSpells.add(spell);
+    // Belum ngehandle swap spell
   }
   public void attack(Character character){
     switch (this.type){
