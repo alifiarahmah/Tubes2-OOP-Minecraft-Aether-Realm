@@ -3,10 +3,13 @@ package com.aetherwars;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.aetherwars.card.Character.Character;
 import com.aetherwars.card.Character.Type;
+import com.aetherwars.controller.BoardController;
+import com.aetherwars.event.BoardChannel;
 import com.aetherwars.util.CSVReader;
 
 
@@ -39,7 +42,8 @@ public class AetherWars{
     }
   }
 */
-public static void loadCards() throws IOException, URISyntaxException {
+public static List<Character> loadCards() throws IOException, URISyntaxException {
+  List<Character> listChar = new ArrayList<>();
   File characterCSVFile = new File(AetherWars.class.getResource(CHARACTER_CSV_FILE_PATH).toURI());
   CSVReader characterReader = new CSVReader(characterCSVFile, "\t");
   characterReader.setSkipHeader(true);
@@ -49,16 +53,20 @@ public static void loadCards() throws IOException, URISyntaxException {
             row[3], row[4], Type.valueOf(row[2]),Integer.parseInt(row[5]),Integer.parseInt(row[8]),
             Float.parseFloat(row[6]),Integer.parseInt(row[9]));
     System.out.println(c);
+    listChar.add(c);
   }
+  return listChar;
 }
   public static void main(String[] args) {
     //launch();
     Frame main_frame = new Frame();
+    BoardChannel channel = new BoardChannel();
+    BoardController board = new BoardController(channel);
     try {
-      AetherWars.loadCards();
+     List<Character> listChar =   AetherWars.loadCards();
     } catch (Exception e) {
       System.out.println("Failed to load cards: " + e);
     }
-    main_frame.run();
+    main_frame.run(board);
   }
 }

@@ -4,12 +4,14 @@
  */
 package com.aetherwars.view;
 
+import com.aetherwars.controller.BoardController;
+
 /**
  *
  * @author Fahmi
  */
 public class Frame extends javax.swing.JFrame {
-
+    private BoardController board_controller;
     /**
      * Creates new form Frame
      */
@@ -704,8 +706,10 @@ public class Frame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public void run() {
+    public void run(BoardController board_controller) {
+        this.board_controller = board_controller;
         new Frame().setVisible(true);
+
     }
     /**
      * @param args the command line arguments
