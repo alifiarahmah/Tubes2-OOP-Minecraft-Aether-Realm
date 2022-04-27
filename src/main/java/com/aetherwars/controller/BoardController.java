@@ -15,4 +15,9 @@ public class BoardController implements Subscriber, Publisher {
     public void publish(Event event) {
 
     }
+
+    @Override
+    public void onEvent(Event event) {
+
+    }
 }

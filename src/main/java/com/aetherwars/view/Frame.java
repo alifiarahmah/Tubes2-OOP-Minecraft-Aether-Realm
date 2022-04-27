@@ -5,6 +5,7 @@
 package com.aetherwars.view;
 
 import com.aetherwars.controller.BoardController;
+import com.aetherwars.GUI.Components.CardLabel;
 
 /**
  *
@@ -28,7 +29,7 @@ public class Frame extends javax.swing.JFrame {
    // // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
-
+        card = new CardLabel("piglin","babi");
         jPanel7 = new javax.swing.JPanel();
         pnl_north = new javax.swing.JPanel();
         pnl_healthbar1 = new javax.swing.JPanel();
@@ -517,6 +518,19 @@ public class Frame extends javax.swing.JFrame {
         pnl_south.setLayout(new java.awt.BorderLayout());
 
         pnl_hand_1.setBackground(new java.awt.Color(200, 200, 200));
+        //pnl_hand_1.setBackground(new java.awt.Color(255, 53, 184));
+
+        javax.swing.GroupLayout cardLayout = new javax.swing.GroupLayout(card);
+        card.setLayout(cardLayout);
+        cardLayout.setHorizontalGroup(
+                cardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 76, Short.MAX_VALUE)
+        );
+        cardLayout.setVerticalGroup(
+                cardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 126, Short.MAX_VALUE)
+        );
+
 
         javax.swing.GroupLayout pnl_hand_1Layout = new javax.swing.GroupLayout(pnl_hand_1);
         pnl_hand_1.setLayout(pnl_hand_1Layout);
@@ -582,6 +596,7 @@ public class Frame extends javax.swing.JFrame {
         );
 
         javax.swing.GroupLayout pnl_south_westLayout = new javax.swing.GroupLayout(pnl_south_west);
+ //       pnl_south_west.setBackground(new java.awt.Color(255, 53, 184));
         pnl_south_west.setLayout(pnl_south_westLayout);
         pnl_south_westLayout.setHorizontalGroup(
             pnl_south_westLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -596,7 +611,9 @@ public class Frame extends javax.swing.JFrame {
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(card,javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+
         );
         pnl_south_westLayout.setVerticalGroup(
             pnl_south_westLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -608,7 +625,9 @@ public class Frame extends javax.swing.JFrame {
                     .addComponent(pnl_hand_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                    .addComponent(card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+
+                    .addContainerGap(10, Short.MAX_VALUE))
         );
 
         pnl_south.add(pnl_south_west, java.awt.BorderLayout.WEST);
@@ -682,6 +701,7 @@ public class Frame extends javax.swing.JFrame {
         jPanel2.add(filler5, java.awt.BorderLayout.CENTER);
 
         jPanel8.setBackground(new java.awt.Color(200, 200, 200));
+        //.setBackground(new java.awt.Color(255, 53, 184));
         jPanel8.setPreferredSize(new java.awt.Dimension(100, 20));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -701,6 +721,7 @@ public class Frame extends javax.swing.JFrame {
 
         pnl_south.add(pnl_south_east, java.awt.BorderLayout.EAST);
         pnl_south.add(filler1, java.awt.BorderLayout.SOUTH);
+        //pnl_south.add(card,java.awt.BorderLayout.SOUTH);
 
         getContentPane().add(pnl_south, java.awt.BorderLayout.SOUTH);
 
@@ -805,5 +826,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_turns;
     private javax.swing.JProgressBar prb_healthbar1;
     private javax.swing.JProgressBar prb_healthbar2;
+    private CardLabel card;
     // End of variables declaration//GEN-END:variables
 }
