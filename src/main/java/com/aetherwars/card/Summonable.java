@@ -4,5 +4,6 @@ import com.aetherwars.card.Character.Type;
 
 public interface Summonable {
     Type getType();
-    int getAttack();
+    int getBaseAtk();
+    float getBaseHealth();
 }
