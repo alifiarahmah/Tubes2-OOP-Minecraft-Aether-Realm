@@ -4,12 +4,9 @@
  */
 package com.aetherwars.view;
 
-import com.aetherwars.GUI.Components.CardDeckPanel;
-import com.aetherwars.GUI.Components.CardDescriptionPanel;
-import com.aetherwars.GUI.Components.CardPreviewPanel;
+import com.aetherwars.GUI.Components.*;
 import com.aetherwars.card.Character.Type;
 import com.aetherwars.controller.BoardController;
-import com.aetherwars.GUI.Components.HandCardLabel;
 import com.aetherwars.card.Character.Character;
 import com.aetherwars.card.Character.Type;
 import java.awt.*;
@@ -93,7 +90,7 @@ public class Frame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         cardDeckPanel = new CardDeckPanel(20,60);
         filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5));
-        jPanel8 = new javax.swing.JPanel();
+        showManaLabel = new ShowManaLabel(0,1);
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 0));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -671,7 +668,7 @@ public class Frame extends javax.swing.JFrame {
 
         pnl_south_east.add(pnl_card_description);
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(100, 50));
+        jPanel2.setPreferredSize(new java.awt.Dimension(100, 120));
         jPanel2.setLayout(new java.awt.BorderLayout());
         //cardDeckPanel.setBackground(new java.awt.Color(200, 120, 200));
 
@@ -691,7 +688,7 @@ public class Frame extends javax.swing.JFrame {
 */
         jPanel2.add(cardDeckPanel, java.awt.BorderLayout.NORTH);
         jPanel2.add(filler5, java.awt.BorderLayout.CENTER);
-
+/*
         jPanel8.setBackground(new java.awt.Color(200, 120, 200));
         //.setBackground(new java.awt.Color(255, 53, 184));
         jPanel8.setPreferredSize(new java.awt.Dimension(100, 100));
@@ -706,8 +703,8 @@ public class Frame extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 20, Short.MAX_VALUE)
         );
-
-        jPanel2.add(jPanel8, java.awt.BorderLayout.SOUTH);
+*/
+        jPanel2.add(showManaLabel, java.awt.BorderLayout.SOUTH);
 
         pnl_south_east.add(jPanel2);
 
@@ -789,7 +786,7 @@ public class Frame extends javax.swing.JFrame {
     private HandCardLabel handCard4;
     private HandCardLabel handCard5;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
+    private ShowManaLabel showManaLabel;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;

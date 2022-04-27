@@ -18,7 +18,7 @@ public class ShowManaLabel extends JPanel {
         this.manalabel = new JLabel("Mana");
         this.manaLeftLabel = new JLabel(this.currentMana+"/"+this.maxMana);
         this.setBackground(new java.awt.Color(200, 200, 200));
-        this.setPreferredSize(new java.awt.Dimension(60, 50));
+        this.setPreferredSize(new java.awt.Dimension(100, 50));
 
         showManaLayout.setHorizontalGroup(
                 showManaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
