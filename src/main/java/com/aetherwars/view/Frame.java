@@ -4,6 +4,7 @@
  */
 package com.aetherwars.view;
 
+import com.aetherwars.GUI.Components.CardPreviewPanel;
 import com.aetherwars.controller.BoardController;
 import com.aetherwars.GUI.Components.HandCardLabel;
 
@@ -82,7 +83,7 @@ public class Frame extends javax.swing.JFrame {
         handCard4 = new HandCardLabel(5,"card4_desc","/com/aetherwars/card/image/spell/potion/GWS.png");
         handCard5 = new HandCardLabel(6,"card5_desc","/com/aetherwars/card/image/spell/swap/Swab Test.png");
         pnl_south_center = new javax.swing.JPanel();
-        pnl_card_preview = new javax.swing.JPanel();
+        pnl_card_preview = new CardPreviewPanel("/com/aetherwars/card/image/character/Sheep.png");
         pnl_south_east = new javax.swing.JPanel();
         pnl_card_description = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -631,7 +632,7 @@ public class Frame extends javax.swing.JFrame {
         );
 
         pnl_south.add(pnl_south_west, java.awt.BorderLayout.WEST);
-
+        /*
         pnl_card_preview.setBackground(new java.awt.Color(50, 50, 50));
 
         javax.swing.GroupLayout pnl_card_previewLayout = new javax.swing.GroupLayout(pnl_card_preview);
@@ -644,7 +645,7 @@ public class Frame extends javax.swing.JFrame {
             pnl_card_previewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 130, Short.MAX_VALUE)
         );
-
+*/
         javax.swing.GroupLayout pnl_south_centerLayout = new javax.swing.GroupLayout(pnl_south_center);
         pnl_south_center.setLayout(pnl_south_centerLayout);
         pnl_south_centerLayout.setHorizontalGroup(
@@ -807,7 +808,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_attack_phase;
     private javax.swing.JPanel pnl_board;
     private javax.swing.JPanel pnl_card_description;
-    private javax.swing.JPanel pnl_card_preview;
+    private CardPreviewPanel pnl_card_preview;
     private javax.swing.JPanel pnl_center;
     private javax.swing.JPanel pnl_draw_phase;
     private javax.swing.JPanel pnl_end_phase;
