@@ -2,12 +2,15 @@ package com.aetherwars.model;
 import com.aetherwars.card.Card;
 import com.aetherwars.card.Character.Character;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Player {
     private String name;
     private int HP ;
     private int mana;
     private int maxMana;
-    private Card[] handCard;
+    private List<Card> handCard;
     private Character[] onBoardCard;
 
     public Player(String name){
@@ -15,7 +18,7 @@ public class Player {
         this.HP = 80;
         this.mana = 1;
         this.maxMana = 1;
-        this.handCard = new Card[5];
+        this.handCard = new ArrayList<>();
         this.onBoardCard = new Character[5];
     }
     public void attack(Player p,Character c_self,Character c_enemy){
@@ -42,5 +45,29 @@ public class Player {
     public int getHP(){
         return this.HP;
     }
-
+    public void addCard(Card card){
+        //assume udah dihandle controller
+        if(this.handCard.size()<5){
+            this.handCard.add(card);
+        }
+        else{
+            removeCard(0);
+            this.handCard.add(card);
+        }
+    }
+    public Card removeCard(int index){
+        //asumsi: mulai dari 0
+        Card card = this.handCard.remove(index);
+        return card;
+    }
+    public void addToDeck(Character character,int index){
+        //assume udah dihandle controller
+        this.onBoardCard[index] = character;
+    }
+    public Character removeFromDeck(int index){
+        //asumsi: mulai dari 0
+        Character chara = this.onBoardCard[index];
+        this.onBoardCard[index] = null;
+        return chara;
+    }
 }

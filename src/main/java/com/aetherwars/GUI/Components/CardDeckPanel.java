@@ -35,4 +35,9 @@ public class CardDeckPanel extends JPanel {
                         .addGap(0, 20, Short.MAX_VALUE)
         );
     }
+    public void updateDeck(int card){
+        this.currentCard = card;
+        this.cardLeftLabel.setText(this.currentCard+"/"+this.maxCard);
+    }
+
 }
