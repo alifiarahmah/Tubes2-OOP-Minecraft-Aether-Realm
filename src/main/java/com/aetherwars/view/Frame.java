@@ -76,11 +76,11 @@ public class Frame extends javax.swing.JFrame {
         pnl_next_phase = new javax.swing.JPanel();
         pnl_south = new javax.swing.JPanel();
         pnl_south_west = new javax.swing.JPanel();
-        handCard1 = new CardLabel("card1","card1_desc");
-        handCard2 = new CardLabel("card2","card2_desc");
-        handCard3 = new CardLabel("card3","card3_desc");
-        handCard4 = new CardLabel("card4","card4_desc");
-        handCard5 = new CardLabel("card5","card5_desc");
+        handCard1 = new CardLabel(2,"card1_desc","/com/aetherwars/card/image/character/Creeper.png");
+        handCard2 = new CardLabel(3,"card2_desc","/com/aetherwars/card/image/character/Skeleton.png");
+        handCard3 = new CardLabel(4,"card3_desc","/com/aetherwars/card/image/spell/morph/Sheepify.png");
+        handCard4 = new CardLabel(5,"card4_desc","/com/aetherwars/card/image/spell/potion/GWS.png");
+        handCard5 = new CardLabel(6,"card5_desc","/com/aetherwars/card/image/swap/Swab Test.png");
         pnl_south_center = new javax.swing.JPanel();
         pnl_card_preview = new javax.swing.JPanel();
         pnl_south_east = new javax.swing.JPanel();
