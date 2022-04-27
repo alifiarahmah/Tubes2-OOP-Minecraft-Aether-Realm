@@ -54,6 +54,7 @@ public class Frame extends javax.swing.JFrame {
         player1Picture = new PlayerPicture("/com/aetherwars/card/image/Player/Steve.png");
         deck_A_player1 = new PlayerDeckCard("A");
         deck_C_player1 = new PlayerDeckCard("C");
+        deck_C_player1.addCharacter(null);
         deck_B_player1 = new PlayerDeckCard("B");
         deck_D_player1 = new PlayerDeckCard("D");
         deck_E_player1 = new PlayerDeckCard("E");
@@ -205,19 +206,6 @@ public class Frame extends javax.swing.JFrame {
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 75, Short.MAX_VALUE)
-        );
-
-        jPanel26.setBackground(new java.awt.Color(200, 200, 200));
-
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 74, Short.MAX_VALUE)
-        );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 75, Short.MAX_VALUE)
         );
 */
@@ -619,22 +607,6 @@ public class Frame extends javax.swing.JFrame {
 */
         jPanel2.add(cardDeckPanel, java.awt.BorderLayout.NORTH);
         jPanel2.add(filler5, java.awt.BorderLayout.CENTER);
-/*
-        jPanel8.setBackground(new java.awt.Color(200, 120, 200));
-        //.setBackground(new java.awt.Color(255, 53, 184));
-        jPanel8.setPreferredSize(new java.awt.Dimension(100, 100));
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
-        );
-*/
         jPanel2.add(showManaLabel, java.awt.BorderLayout.SOUTH);
 
         pnl_south_east.add(jPanel2);
