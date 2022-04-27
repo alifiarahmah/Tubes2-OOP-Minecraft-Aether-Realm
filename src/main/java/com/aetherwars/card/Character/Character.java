@@ -1,11 +1,12 @@
 package com.aetherwars.card.Character;
 
 import com.aetherwars.card.Card;
+import com.aetherwars.card.Summonable;
 import com.aetherwars.card.spell.Spell;
 
 import java.util.ArrayList;
 import java.util.List;
-public class Character extends Card {
+public class Character extends Card implements Summonable {
   private Type type; // Wajib
   private int exp;
   private int maxExpToNextLevel;
