@@ -51,7 +51,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_center = new javax.swing.JPanel();
         pnl_board = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
+        player1Picture = new PlayerPicture("/com/aetherwars/card/image/Player/Steve.png");
         jPanel16 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
@@ -60,7 +60,7 @@ public class Frame extends javax.swing.JFrame {
         filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 10), new java.awt.Dimension(10, 10), new java.awt.Dimension(10, 10));
         jPanel14 = new javax.swing.JPanel();
         filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 10), new java.awt.Dimension(10, 10), new java.awt.Dimension(10, 10));
-        jPanel29 = new javax.swing.JPanel();
+        player2Picture = new PlayerPicture("/com/aetherwars/card/image/Player/Alex.jpg");
         jPanel30 = new javax.swing.JPanel();
         jPanel33 = new javax.swing.JPanel();
         jPanel34 = new javax.swing.JPanel();
@@ -151,6 +151,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_turns.setLayout(new java.awt.BorderLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        //jPanel1.setBackground(new java.awt.Color(200, 120, 153));
         jPanel1.setForeground(new java.awt.Color(153, 153, 153));
         jPanel1.setPreferredSize(new java.awt.Dimension(40, 40));
 
@@ -179,8 +180,9 @@ public class Frame extends javax.swing.JFrame {
 
         pnl_board.setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel11.setBackground(new java.awt.Color(200, 200, 200));
-
+        //jPanel11.setBackground(new java.awt.Color(200, 200, 200));
+        //jPanel11.setBackground(new java.awt.Color(120, 200, 200));
+/*
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -191,7 +193,7 @@ public class Frame extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 75, Short.MAX_VALUE)
         );
-
+*/
         jPanel16.setBackground(new java.awt.Color(200, 200, 200));
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -206,6 +208,7 @@ public class Frame extends javax.swing.JFrame {
         );
 
         jPanel19.setBackground(new java.awt.Color(200, 200, 200));
+        //jPanel19.setBackground(new java.awt.Color(120, 200, 200));
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -219,6 +222,7 @@ public class Frame extends javax.swing.JFrame {
         );
 
         jPanel20.setBackground(new java.awt.Color(200, 200, 200));
+        //jPanel20.setBackground(new java.awt.Color(200, 120, 200));
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -232,6 +236,7 @@ public class Frame extends javax.swing.JFrame {
         );
 
         jPanel22.setBackground(new java.awt.Color(200, 200, 200));
+       //jPanel22.setBackground(new java.awt.Color(200, 200, 120));
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
@@ -265,7 +270,7 @@ public class Frame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(filler7, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player1Picture, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel13Layout.createSequentialGroup()
@@ -291,7 +296,7 @@ public class Frame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(player1Picture, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(68, 68, 68))
                         .addGroup(jPanel13Layout.createSequentialGroup()
                             .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,7 +313,7 @@ public class Frame extends javax.swing.JFrame {
         );
 
         pnl_board.add(jPanel13);
-
+/*
         jPanel29.setBackground(new java.awt.Color(200, 200, 200));
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
@@ -321,7 +326,7 @@ public class Frame extends javax.swing.JFrame {
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 75, Short.MAX_VALUE)
         );
-
+*/
         jPanel30.setBackground(new java.awt.Color(200, 200, 200));
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
@@ -403,7 +408,7 @@ public class Frame extends javax.swing.JFrame {
                     .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(player2Picture, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(filler8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -429,8 +434,8 @@ public class Frame extends javax.swing.JFrame {
                         .addGap(47, 47, 47)
                         .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(15, 15, 20)
+                        .addComponent(player2Picture, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(24, 24, 24))
         );
 
@@ -772,7 +777,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler7;
     private javax.swing.Box.Filler filler8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel11;
+    private PlayerPicture player1Picture;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel16;
@@ -781,7 +786,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel29;
+    private PlayerPicture player2Picture;
     private CardDeckPanel cardDeckPanel;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel33;
