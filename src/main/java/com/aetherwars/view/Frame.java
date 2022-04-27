@@ -4,6 +4,7 @@
  */
 package com.aetherwars.view;
 
+import com.aetherwars.GUI.Components.CardDeckPanel;
 import com.aetherwars.GUI.Components.CardDescriptionPanel;
 import com.aetherwars.GUI.Components.CardPreviewPanel;
 import com.aetherwars.card.Character.Type;
@@ -90,7 +91,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_south_east = new javax.swing.JPanel();
         pnl_card_description = new CardDescriptionPanel(new Character(1,"Enderman",100,"Penghuni The End","/com/aetherwars/card/image/character/Enderman.png", com.aetherwars.card.Character.Type.END,10,2,12,2));
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        cardDeckPanel = new CardDeckPanel(20,60);
         filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5));
         jPanel8 = new javax.swing.JPanel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 0));
@@ -668,31 +669,17 @@ public class Frame extends javax.swing.JFrame {
 
         pnl_south.add(pnl_south_center, java.awt.BorderLayout.CENTER);
 
-        //pnl_card_description.setBackground(new java.awt.Color(200, 200, 200));
-        /*
-        pnl_card_description.setPreferredSize(new java.awt.Dimension(200, 123));
-
-        javax.swing.GroupLayout pnl_card_descriptionLayout = new javax.swing.GroupLayout(pnl_card_description);
-        pnl_card_description.setLayout(pnl_card_descriptionLayout);
-        pnl_card_descriptionLayout.setHorizontalGroup(
-            pnl_card_descriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        pnl_card_descriptionLayout.setVerticalGroup(
-            pnl_card_descriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 123, Short.MAX_VALUE)
-        );
-*/
         pnl_south_east.add(pnl_card_description);
 
         jPanel2.setPreferredSize(new java.awt.Dimension(100, 50));
         jPanel2.setLayout(new java.awt.BorderLayout());
+        //cardDeckPanel.setBackground(new java.awt.Color(200, 120, 200));
 
-        jPanel3.setBackground(new java.awt.Color(200, 200, 200));
-        jPanel3.setPreferredSize(new java.awt.Dimension(100, 20));
-
+        //jPanel3.setBackground(new java.awt.Color(200, 200, 200));
+        //jPanel3.setPreferredSize(new java.awt.Dimension(100, 20));
+        /*
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
+        //jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
@@ -701,13 +688,13 @@ public class Frame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-
-        jPanel2.add(jPanel3, java.awt.BorderLayout.NORTH);
+*/
+        jPanel2.add(cardDeckPanel, java.awt.BorderLayout.NORTH);
         jPanel2.add(filler5, java.awt.BorderLayout.CENTER);
 
-        jPanel8.setBackground(new java.awt.Color(200, 200, 200));
+        jPanel8.setBackground(new java.awt.Color(200, 120, 200));
         //.setBackground(new java.awt.Color(255, 53, 184));
-        jPanel8.setPreferredSize(new java.awt.Dimension(100, 20));
+        jPanel8.setPreferredSize(new java.awt.Dimension(100, 100));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -792,7 +779,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel3;
+    private CardDeckPanel cardDeckPanel;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
