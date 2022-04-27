@@ -5,7 +5,7 @@
 package com.aetherwars.view;
 
 import com.aetherwars.controller.BoardController;
-import com.aetherwars.GUI.Components.CardLabel;
+import com.aetherwars.GUI.Components.HandCardLabel;
 
 import java.awt.*;
 
@@ -76,11 +76,11 @@ public class Frame extends javax.swing.JFrame {
         pnl_next_phase = new javax.swing.JPanel();
         pnl_south = new javax.swing.JPanel();
         pnl_south_west = new javax.swing.JPanel();
-        handCard1 = new CardLabel(2,"card1_desc","/com/aetherwars/card/image/character/Creeper.png");
-        handCard2 = new CardLabel(3,"card2_desc","/com/aetherwars/card/image/character/Skeleton.png");
-        handCard3 = new CardLabel(4,"card3_desc","/com/aetherwars/card/image/spell/morph/Sheepify.png");
-        handCard4 = new CardLabel(5,"card4_desc","/com/aetherwars/card/image/spell/potion/GWS.png");
-        handCard5 = new CardLabel(6,"card5_desc","/com/aetherwars/card/image/swap/Swab Test.png");
+        handCard1 = new HandCardLabel(2,"card1_desc","/com/aetherwars/card/image/character/Creeper.png");
+        handCard2 = new HandCardLabel(3,"card2_desc","/com/aetherwars/card/image/character/Skeleton.png");
+        handCard3 = new HandCardLabel(4,"card3_desc","/com/aetherwars/card/image/spell/morph/Sheepify.png");
+        handCard4 = new HandCardLabel(5,"card4_desc","/com/aetherwars/card/image/spell/potion/GWS.png");
+        handCard5 = new HandCardLabel(6,"card5_desc","/com/aetherwars/card/image/spell/swap/Swab Test.png");
         pnl_south_center = new javax.swing.JPanel();
         pnl_card_preview = new javax.swing.JPanel();
         pnl_south_east = new javax.swing.JPanel();
@@ -793,9 +793,9 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
-    private CardLabel handCard3;
-    private CardLabel handCard4;
-    private CardLabel handCard5;
+    private HandCardLabel handCard3;
+    private HandCardLabel handCard4;
+    private HandCardLabel handCard5;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private java.awt.Label label1;
@@ -811,8 +811,8 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_center;
     private javax.swing.JPanel pnl_draw_phase;
     private javax.swing.JPanel pnl_end_phase;
-    private CardLabel handCard1;
-    private CardLabel handCard2;
+    private HandCardLabel handCard1;
+    private HandCardLabel handCard2;
     private javax.swing.JPanel pnl_healtbar2;
     private javax.swing.JPanel pnl_healthbar1;
     private javax.swing.JPanel pnl_next_phase;

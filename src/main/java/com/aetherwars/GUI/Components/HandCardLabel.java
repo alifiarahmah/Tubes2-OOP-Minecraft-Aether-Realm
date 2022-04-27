@@ -7,16 +7,17 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URL;
 import java.net.URLEncoder;
 
-public class CardLabel extends JPanel {
+public class HandCardLabel extends JPanel {
     private JLabel CardImage;
     private JLabel manaCostLabel;
     private JLabel statLabel;
     private ImageIcon picture;
     public javax.swing.GroupLayout cardLayout;
 
-    public CardLabel(int manacost,String description,String imagePath){
+    public HandCardLabel(int manacost,String description,String imagePath){
         cardLayout = new GroupLayout(this);
         this.setLayout(cardLayout);
         cardLayout.setAutoCreateGaps(true);
@@ -25,8 +26,12 @@ public class CardLabel extends JPanel {
         try {
             //String path = URLEncoder.encode(imagePath, "UTF-8").replace("+", "%20");
             //System.out.println(path);
-            URI uri = new URI(imagePath.replaceAll(" ","%20"));
-            picture = new ImageIcon(getClass().getResource(uri.getPath()));
+            System.out.println(imagePath);
+            //URI uri = new URI(imagePath.replaceAll(" ","%20"));
+            //System.out.println(uri.getPath());
+            URL path = getClass().getResource(imagePath);
+            BufferedImage original_image = ImageIO.read(new File(path.toURI()));
+            picture = new ImageIcon(original_image);
             //resize image
             Image image = picture.getImage();
             Image new_img = image.getScaledInstance(60,70,Image.SCALE_DEFAULT);
