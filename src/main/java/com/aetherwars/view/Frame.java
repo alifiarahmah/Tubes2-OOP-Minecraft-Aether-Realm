@@ -7,6 +7,8 @@ package com.aetherwars.view;
 import com.aetherwars.controller.BoardController;
 import com.aetherwars.GUI.Components.CardLabel;
 
+import java.awt.*;
+
 /**
  *
  * @author Fahmi
@@ -29,7 +31,7 @@ public class Frame extends javax.swing.JFrame {
    // // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
-        card = new CardLabel("piglin","babi");
+        // new CardLabel("piglin","babi");
         jPanel7 = new javax.swing.JPanel();
         pnl_north = new javax.swing.JPanel();
         pnl_healthbar1 = new javax.swing.JPanel();
@@ -74,11 +76,11 @@ public class Frame extends javax.swing.JFrame {
         pnl_next_phase = new javax.swing.JPanel();
         pnl_south = new javax.swing.JPanel();
         pnl_south_west = new javax.swing.JPanel();
-        pnl_hand_1 = new javax.swing.JPanel();
-        pnl_hand_2 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        handCard1 = new CardLabel("card1","card1_desc");
+        handCard2 = new CardLabel("card2","card2_desc");
+        handCard3 = new CardLabel("card3","card3_desc");
+        handCard4 = new CardLabel("card4","card4_desc");
+        handCard5 = new CardLabel("card5","card5_desc");
         pnl_south_center = new javax.swing.JPanel();
         pnl_card_preview = new javax.swing.JPanel();
         pnl_south_east = new javax.swing.JPanel();
@@ -516,18 +518,19 @@ public class Frame extends javax.swing.JFrame {
         getContentPane().add(pnl_center, java.awt.BorderLayout.CENTER);
 
         pnl_south.setLayout(new java.awt.BorderLayout());
-
+/*
         pnl_hand_1.setBackground(new java.awt.Color(200, 200, 200));
         //pnl_hand_1.setBackground(new java.awt.Color(255, 53, 184));
 
-        javax.swing.GroupLayout cardLayout = new javax.swing.GroupLayout(card);
-        card.setLayout(cardLayout);
-        cardLayout.setHorizontalGroup(
-                cardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        //javax.swing.GroupLayout cardLayout = new javax.swing.GroupLayout(card);
+        //card.setLayout(cardLayout);
+        /*
+        card.cardLayout.setHorizontalGroup(
+                card.cardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 76, Short.MAX_VALUE)
         );
-        cardLayout.setVerticalGroup(
-                cardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        card.cardLayout.setVerticalGroup(
+                card.cardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 126, Short.MAX_VALUE)
         );
 
@@ -541,8 +544,8 @@ public class Frame extends javax.swing.JFrame {
         pnl_hand_1Layout.setVerticalGroup(
             pnl_hand_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 126, Short.MAX_VALUE)
-        );
-
+        );*/
+/*
         pnl_hand_2.setBackground(new java.awt.Color(200, 200, 200));
 
         javax.swing.GroupLayout pnl_hand_2Layout = new javax.swing.GroupLayout(pnl_hand_2);
@@ -554,8 +557,8 @@ public class Frame extends javax.swing.JFrame {
         pnl_hand_2Layout.setVerticalGroup(
             pnl_hand_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 126, Short.MAX_VALUE)
-        );
-
+        );*/
+/*
         jPanel4.setBackground(new java.awt.Color(200, 200, 200));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -567,8 +570,8 @@ public class Frame extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 126, Short.MAX_VALUE)
-        );
-
+        );*/
+/*
         jPanel5.setBackground(new java.awt.Color(200, 200, 200));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -580,8 +583,8 @@ public class Frame extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 126, Short.MAX_VALUE)
-        );
-
+        );*/
+/*
         jPanel6.setBackground(new java.awt.Color(200, 200, 200));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -594,7 +597,7 @@ public class Frame extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 126, Short.MAX_VALUE)
         );
-
+*/
         javax.swing.GroupLayout pnl_south_westLayout = new javax.swing.GroupLayout(pnl_south_west);
  //       pnl_south_west.setBackground(new java.awt.Color(255, 53, 184));
         pnl_south_west.setLayout(pnl_south_westLayout);
@@ -602,16 +605,15 @@ public class Frame extends javax.swing.JFrame {
             pnl_south_westLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_south_westLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnl_hand_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(handCard1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnl_hand_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(handCard2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(handCard3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(handCard4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(card,javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(handCard5,javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 
         );
@@ -620,13 +622,11 @@ public class Frame extends javax.swing.JFrame {
             .addGroup(pnl_south_westLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_south_westLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnl_hand_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnl_hand_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-
+                    .addComponent(handCard5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(handCard2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(handCard1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(handCard3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(handCard4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(10, Short.MAX_VALUE))
         );
 
@@ -793,9 +793,9 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
+    private CardLabel handCard3;
+    private CardLabel handCard4;
+    private CardLabel handCard5;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private java.awt.Label label1;
@@ -811,8 +811,8 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_center;
     private javax.swing.JPanel pnl_draw_phase;
     private javax.swing.JPanel pnl_end_phase;
-    private javax.swing.JPanel pnl_hand_1;
-    private javax.swing.JPanel pnl_hand_2;
+    private CardLabel handCard1;
+    private CardLabel handCard2;
     private javax.swing.JPanel pnl_healtbar2;
     private javax.swing.JPanel pnl_healthbar1;
     private javax.swing.JPanel pnl_next_phase;
@@ -826,6 +826,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_turns;
     private javax.swing.JProgressBar prb_healthbar1;
     private javax.swing.JProgressBar prb_healthbar2;
-    private CardLabel card;
+   // private CardLabel card;
     // End of variables declaration//GEN-END:variables
 }
