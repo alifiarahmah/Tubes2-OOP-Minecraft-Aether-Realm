@@ -12,6 +12,7 @@ public class Player {
     private int maxMana;
     private List<Card> handCard;
     private Character[] onBoardCard;
+    private boolean isDeckEmpty;
 
     public Player(String name){
         this.name = name;
@@ -20,6 +21,10 @@ public class Player {
         this.maxMana = 1;
         this.handCard = new ArrayList<>();
         this.onBoardCard = new Character[5];
+        for(int i=0;i<5;i++){
+            this.onBoardCard[i] = null;
+        }
+        this.isDeckEmpty = true;
     }
     public void attack(Player p,Character c_self,Character c_enemy){
         if(c_enemy!=null){
@@ -63,11 +68,22 @@ public class Player {
     public void addToDeck(Character character,int index){
         //assume udah dihandle controller
         this.onBoardCard[index] = character;
+        this.isDeckEmpty = false;
     }
     public Character removeFromDeck(int index){
         //asumsi: mulai dari 0
         Character chara = this.onBoardCard[index];
         this.onBoardCard[index] = null;
+        boolean isEmpty = true;
+        for(int i =0;i<5;i++){
+            if(this.onBoardCard[index]!=null){
+                isEmpty = false;
+                break;
+            }
+        }
+        if(isEmpty){
+            this.isDeckEmpty = true;
+        }
         return chara;
     }
 }
