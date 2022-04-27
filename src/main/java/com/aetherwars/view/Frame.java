@@ -76,6 +76,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_end_phase = new javax.swing.JPanel();
         label4 = new java.awt.Label();
         pnl_next_phase = new javax.swing.JPanel();
+        nextPhaseLabel = new java.awt.Button();
         pnl_south = new javax.swing.JPanel();
         pnl_south_west = new javax.swing.JPanel();
         handCard1 = new HandCardLabel(2,"card1_desc","/com/aetherwars/card/image/character/Creeper.png");
@@ -438,7 +439,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_center.add(pnl_board);
 
         pnl_draw_phase.setBackground(new java.awt.Color(225, 225, 225));
-        pnl_draw_phase.setPreferredSize(new java.awt.Dimension(175, 24));
+        pnl_draw_phase.setPreferredSize(new java.awt.Dimension(275, 24));
         pnl_draw_phase.setLayout(new java.awt.BorderLayout());
 
         label1.setAlignment(java.awt.Label.CENTER);
@@ -446,7 +447,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_draw_phase.add(label1, java.awt.BorderLayout.CENTER);
 
         pnl_plan_phase.setBackground(new java.awt.Color(225, 225, 225));
-        pnl_plan_phase.setPreferredSize(new java.awt.Dimension(175, 24));
+        pnl_plan_phase.setPreferredSize(new java.awt.Dimension(275, 24));
         pnl_plan_phase.setLayout(new java.awt.BorderLayout());
 
         label2.setAlignment(java.awt.Label.CENTER);
@@ -454,7 +455,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_plan_phase.add(label2, java.awt.BorderLayout.CENTER);
 
         pnl_attack_phase.setBackground(new java.awt.Color(225, 225, 225));
-        pnl_attack_phase.setPreferredSize(new java.awt.Dimension(175, 24));
+        pnl_attack_phase.setPreferredSize(new java.awt.Dimension(275, 24));
         pnl_attack_phase.setLayout(new java.awt.BorderLayout());
 
         label3.setAlignment(java.awt.Label.CENTER);
@@ -462,24 +463,29 @@ public class Frame extends javax.swing.JFrame {
         pnl_attack_phase.add(label3, java.awt.BorderLayout.CENTER);
 
         pnl_end_phase.setBackground(new java.awt.Color(225, 225, 225));
-        pnl_end_phase.setPreferredSize(new java.awt.Dimension(175, 24));
+        pnl_end_phase.setPreferredSize(new java.awt.Dimension(275, 24));
         pnl_end_phase.setLayout(new java.awt.BorderLayout());
 
         label4.setAlignment(java.awt.Label.CENTER);
         label4.setText("END");
         pnl_end_phase.add(label4, java.awt.BorderLayout.CENTER);
-
+        nextPhaseLabel.setLabel(">>");
+        //nextPhaseLabel.setAlignment(java.awt.Label.CENTER);
+        nextPhaseLabel.setBackground(new java.awt.Color(0, 0, 0));
+        nextPhaseLabel.setForeground(new java.awt.Color(225, 225, 225));
         pnl_next_phase.setBackground(new java.awt.Color(225, 225, 225));
-        pnl_next_phase.setPreferredSize(new java.awt.Dimension(175, 24));
+        pnl_next_phase.setPreferredSize(new java.awt.Dimension(200, 24));
 
         javax.swing.GroupLayout pnl_next_phaseLayout = new javax.swing.GroupLayout(pnl_next_phase);
         pnl_next_phase.setLayout(pnl_next_phaseLayout);
         pnl_next_phaseLayout.setHorizontalGroup(
             pnl_next_phaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nextPhaseLabel)
             .addGap(0, 90, Short.MAX_VALUE)
         );
         pnl_next_phaseLayout.setVerticalGroup(
             pnl_next_phaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nextPhaseLabel)
             .addGap(0, 24, Short.MAX_VALUE)
         );
 
@@ -815,6 +821,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_turns;
     private javax.swing.JProgressBar prb_healthbar1;
     private javax.swing.JProgressBar prb_healthbar2;
+    private java.awt.Button nextPhaseLabel;
    // private CardLabel card;
     // End of variables declaration//GEN-END:variables
 }
