@@ -4,10 +4,13 @@
  */
 package com.aetherwars.view;
 
+import com.aetherwars.GUI.Components.CardDescriptionPanel;
 import com.aetherwars.GUI.Components.CardPreviewPanel;
+import com.aetherwars.card.Character.Type;
 import com.aetherwars.controller.BoardController;
 import com.aetherwars.GUI.Components.HandCardLabel;
-
+import com.aetherwars.card.Character.Character;
+import com.aetherwars.card.Character.Type;
 import java.awt.*;
 
 /**
@@ -85,7 +88,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_south_center = new javax.swing.JPanel();
         pnl_card_preview = new CardPreviewPanel("/com/aetherwars/card/image/character/Sheep.png");
         pnl_south_east = new javax.swing.JPanel();
-        pnl_card_description = new javax.swing.JPanel();
+        pnl_card_description = new CardDescriptionPanel(new Character(1,"Enderman",100,"Penghuni The End","/com/aetherwars/card/image/character/Enderman.png", com.aetherwars.card.Character.Type.END,10,2,12,2));
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5));
@@ -665,7 +668,8 @@ public class Frame extends javax.swing.JFrame {
 
         pnl_south.add(pnl_south_center, java.awt.BorderLayout.CENTER);
 
-        pnl_card_description.setBackground(new java.awt.Color(200, 200, 200));
+        //pnl_card_description.setBackground(new java.awt.Color(200, 200, 200));
+        /*
         pnl_card_description.setPreferredSize(new java.awt.Dimension(200, 123));
 
         javax.swing.GroupLayout pnl_card_descriptionLayout = new javax.swing.GroupLayout(pnl_card_description);
@@ -678,7 +682,7 @@ public class Frame extends javax.swing.JFrame {
             pnl_card_descriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 123, Short.MAX_VALUE)
         );
-
+*/
         pnl_south_east.add(pnl_card_description);
 
         jPanel2.setPreferredSize(new java.awt.Dimension(100, 50));
