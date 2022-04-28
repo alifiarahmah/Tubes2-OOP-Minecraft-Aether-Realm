@@ -86,4 +86,8 @@ public class Player {
         }
         return chara;
     }
+    
+    public boolean getIsDeckEmpty() {
+    	return this.isDeckEmpty;
+    }
 }
