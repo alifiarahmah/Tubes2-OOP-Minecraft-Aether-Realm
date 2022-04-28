@@ -37,9 +37,10 @@ public class PlayerDeckCard extends JPanel {
         this.deckLabel = new JLabel(deckNumber);
         this.deckLabel.setFont(new Font("Serif", Font.PLAIN, 50));
         this.setBackground(new java.awt.Color(200, 200, 200));
-        this.setPreferredSize(new java.awt.Dimension(75, 90));
+        this.setPreferredSize(new java.awt.Dimension(80, 140));
         cardDescriptionLayout.setVerticalGroup(
                 cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addGap(130)
                         .addComponent(this.deckLabel)
         );
         cardDescriptionLayout.setHorizontalGroup(
@@ -57,43 +58,73 @@ public class PlayerDeckCard extends JPanel {
         this.healthIconLabel = new JLabel(this.healthIcon);
         this.attackLabel = new JLabel(Integer.toString(c.getAttack()));
         this.healthLabel = new JLabel(Float.toString(c.getHealth()));
-        this.sprite = loadAsset(c.getBaseCard().getImagepath(),80,100);
+        this.sprite = loadAsset(c.getBaseCard().getImagepath(),80,70);
         this.spriteLabel = new JLabel(this.sprite);
         this.levelLabel = new JLabel(c.getExp()+"/"+c.getMaxExpToNextLevel()+" ["+c.getLevel()+"]");
 
-        javax.swing.GroupLayout attackLayout = new GroupLayout(this);
-        this.attackPanel.setLayout(attackLayout);
-        attackLayout.setAutoCreateGaps(true);
-        attackLayout.setAutoCreateContainerGaps(true);
+        this.healthPanel = new JPanel();
+        javax.swing.GroupLayout healthLayout = new GroupLayout(this.healthPanel);
+        this.healthPanel.setLayout(healthLayout);
+        this.healthPanel.setBackground(new java.awt.Color(200, 200, 200));
 
-        attackLayout.setVerticalGroup(
+        healthLayout.setHorizontalGroup(
+                healthLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addComponent(this.healthIconLabel)
+                        .addComponent(this.healthLabel)
+        );
+        healthLayout.setVerticalGroup(
+                healthLayout.createSequentialGroup()
+                        .addComponent(this.healthIconLabel)
+                        .addComponent(this.healthLabel)
+        );
+
+
+        this.attackPanel = new JPanel();
+        javax.swing.GroupLayout attackLayout = new GroupLayout(this.attackPanel);
+        this.attackPanel.setLayout(attackLayout);
+        this.attackPanel.setBackground(new java.awt.Color(200, 200, 200));
+        //attackLayout.setAutoCreateGaps(true);
+        //attackLayout.setAutoCreateContainerGaps(true);
+
+        attackLayout.setHorizontalGroup(
                 attackLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
                         .addComponent(this.attackIconLabel)
                         .addComponent(this.attackLabel)
         );
+        attackLayout.setVerticalGroup(
+                attackLayout.createSequentialGroup()
+                        .addComponent(this.attackIconLabel)
+                        .addComponent(this.attackLabel)
+        );
 
+        cardDescriptionLayout.setAutoCreateGaps(false);
+        cardDescriptionLayout.setAutoCreateContainerGaps(false);
 
         cardDescriptionLayout.setVerticalGroup(
                 cardDescriptionLayout.createSequentialGroup()
-                       // .addGroup(cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
-                                .addComponent(this.attackIconLabel)
-                                .addComponent(this.attackLabel)
-                                .addComponent(this.healthIconLabel)
-                        .addComponent(this.healthLabel)
+                        .addGap(10)
+                        .addGroup(cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                                //.addComponent(this.attackIconLabel)
+                                //.addComponent(this.attackLabel)
+                        .addComponent(attackPanel).addGap(20)
+                      //  .addComponent(this.healthLabel)
+                        .addComponent(healthPanel)
+                        )
                         .addComponent(this.spriteLabel)
                         .addComponent(this.levelLabel)
-                        //)
+                        .addGap(10)
 
         );
         cardDescriptionLayout.setHorizontalGroup(
                 cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
-                        .addComponent(this.attackIconLabel)
-                        .addComponent(this.attackLabel)
-                        .addComponent(this.healthIconLabel)
-                        .addComponent(this.healthLabel)
+                        .addGroup(cardDescriptionLayout.createSequentialGroup()
+                        .addComponent(attackPanel).addGap(20)
+                        .addComponent(healthPanel)
+                        )
                         .addComponent(this.spriteLabel)
                         .addComponent(this.levelLabel)
                         .addGap(30)
+
         );
         this.revalidate();
         this.repaint();

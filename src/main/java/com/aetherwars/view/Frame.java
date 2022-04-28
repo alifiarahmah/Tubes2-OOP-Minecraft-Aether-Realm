@@ -553,20 +553,6 @@ public class Frame extends javax.swing.JFrame {
         );
 
         pnl_south.add(pnl_south_west, java.awt.BorderLayout.WEST);
-        /*
-        pnl_card_preview.setBackground(new java.awt.Color(50, 50, 50));
-
-        javax.swing.GroupLayout pnl_card_previewLayout = new javax.swing.GroupLayout(pnl_card_preview);
-        pnl_card_preview.setLayout(pnl_card_previewLayout);
-        pnl_card_previewLayout.setHorizontalGroup(
-            pnl_card_previewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 87, Short.MAX_VALUE)
-        );
-        pnl_card_previewLayout.setVerticalGroup(
-            pnl_card_previewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 130, Short.MAX_VALUE)
-        );
-*/
         javax.swing.GroupLayout pnl_south_centerLayout = new javax.swing.GroupLayout(pnl_south_center);
         pnl_south_center.setLayout(pnl_south_centerLayout);
         pnl_south_centerLayout.setHorizontalGroup(
@@ -590,22 +576,6 @@ public class Frame extends javax.swing.JFrame {
 
         jPanel2.setPreferredSize(new java.awt.Dimension(100, 120));
         jPanel2.setLayout(new java.awt.BorderLayout());
-        //cardDeckPanel.setBackground(new java.awt.Color(200, 120, 200));
-
-        //jPanel3.setBackground(new java.awt.Color(200, 200, 200));
-        //jPanel3.setPreferredSize(new java.awt.Dimension(100, 20));
-        /*
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        //jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-*/
         jPanel2.add(cardDeckPanel, java.awt.BorderLayout.NORTH);
         jPanel2.add(filler5, java.awt.BorderLayout.CENTER);
         jPanel2.add(showManaLabel, java.awt.BorderLayout.SOUTH);
