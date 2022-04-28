@@ -57,6 +57,8 @@ public class Frame extends javax.swing.JFrame {
         deck_C_player1 = new PlayerDeckCard("C");
         deck_C_player1.addCharacter(new SummonedCharacter(new Character(1,"Enderman",100,"Penghuni The End","/com/aetherwars/card/image/character/Enderman.png", com.aetherwars.card.Character.Type.END,10,2,12,2),2));
         deck_B_player1 = new PlayerDeckCard("B");
+        deck_B_player1.addCharacter(new SummonedCharacter(new Character(1,"Enderman",100,"Penghuni The End","/com/aetherwars/card/image/character/Enderman.png", com.aetherwars.card.Character.Type.END,8,2,10,2),2));
+        deck_B_player1.setSelected();
         deck_D_player1 = new PlayerDeckCard("D");
         deck_E_player1 = new PlayerDeckCard("E");
         filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 10), new java.awt.Dimension(10, 10), new java.awt.Dimension(10, 10));

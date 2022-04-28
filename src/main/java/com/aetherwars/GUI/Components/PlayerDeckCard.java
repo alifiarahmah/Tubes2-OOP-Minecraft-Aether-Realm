@@ -5,6 +5,7 @@ import com.aetherwars.card.SummonedCharacter;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -31,9 +32,12 @@ public class PlayerDeckCard extends JPanel {
     public PlayerDeckCard(String deckNumber){
         cardDescriptionLayout = new GroupLayout(this);
         this.setLayout(cardDescriptionLayout);
+        this.deckNumber = deckNumber;
+        initializeDeckCard();
+    }
+    public void initializeDeckCard(){
         cardDescriptionLayout.setAutoCreateGaps(true);
         cardDescriptionLayout.setAutoCreateContainerGaps(true);
-        this.deckNumber = deckNumber;
         this.deckLabel = new JLabel(deckNumber);
         this.deckLabel.setFont(new Font("Serif", Font.PLAIN, 50));
         this.setBackground(new java.awt.Color(200, 200, 200));
@@ -49,6 +53,7 @@ public class PlayerDeckCard extends JPanel {
                         .addComponent(this.deckLabel)
         );
     }
+
     public void addCharacter(SummonedCharacter c){
         this.chara = c;
         this.cardDescriptionLayout.removeLayoutComponent(this.deckLabel);
@@ -104,8 +109,6 @@ public class PlayerDeckCard extends JPanel {
                 cardDescriptionLayout.createSequentialGroup()
                         .addGap(10)
                         .addGroup(cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
-                                //.addComponent(this.attackIconLabel)
-                                //.addComponent(this.attackLabel)
                         .addComponent(attackPanel).addGap(20)
                       //  .addComponent(this.healthLabel)
                         .addComponent(healthPanel)
@@ -129,6 +132,17 @@ public class PlayerDeckCard extends JPanel {
         this.revalidate();
         this.repaint();
     }
+    public void setSelected(){
+        if(this.chara!=null) {
+            this.setBackground(new java.awt.Color(217, 234, 211));
+            this.attackPanel.setBackground(new java.awt.Color(217, 234, 211));
+            this.healthPanel.setBackground(new java.awt.Color(217, 234, 211));
+            Border border = BorderFactory.createLineBorder(new java.awt.Color(251, 180, 84));
+            this.setBorder(border);
+        }
+    }
+
+
     private ImageIcon loadAsset(String imagePath,int scaledWith,int scaledHeight){
         Image new_img = null;
         try {
