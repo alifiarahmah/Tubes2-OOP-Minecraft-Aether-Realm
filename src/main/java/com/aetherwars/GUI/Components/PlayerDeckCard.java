@@ -52,6 +52,8 @@ public class PlayerDeckCard extends JPanel {
                         .addGap(75)
                         .addComponent(this.deckLabel)
         );
+        Border border = BorderFactory.createLineBorder(Color.BLACK);
+        this.setBorder(border);
     }
 
     public void addCharacter(SummonedCharacter c){
@@ -66,7 +68,7 @@ public class PlayerDeckCard extends JPanel {
         this.sprite = loadAsset(c.getBaseCard().getImagepath(),80,70);
         this.spriteLabel = new JLabel(this.sprite);
         this.levelLabel = new JLabel(c.getExp()+"/"+c.getMaxExpToNextLevel()+" ["+c.getLevel()+"]");
-
+        this.deckLabel = null;
         this.healthPanel = new JPanel();
         javax.swing.GroupLayout healthLayout = new GroupLayout(this.healthPanel);
         this.healthPanel.setLayout(healthLayout);
@@ -132,12 +134,56 @@ public class PlayerDeckCard extends JPanel {
         this.revalidate();
         this.repaint();
     }
-    public void setSelected(){
-        if(this.chara!=null) {
+    public void removeCharacter(){
+        this.chara = null;
+        this.cardDescriptionLayout.removeLayoutComponent(this.attackPanel);
+        this.cardDescriptionLayout.removeLayoutComponent(this.healthPanel);
+        this.cardDescriptionLayout.removeLayoutComponent(this.spriteLabel);
+        this.cardDescriptionLayout.removeLayoutComponent(this.levelLabel);
+
+        this.attackIcon = null;
+        this.attackIconLabel = null;
+        this.healthIcon = null;
+        this.healthIconLabel = null;
+        this.attackLabel = null;
+        this.healthLabel = null;
+        this.sprite = null;
+        this.spriteLabel = null;
+        this.levelLabel = null;
+        this.healthPanel = null;
+        this.attackPanel = null;
+        this.deckLabel = new JLabel(deckNumber);
+        this.deckLabel.setFont(new Font("Serif", Font.PLAIN, 50));
+        cardDescriptionLayout.setAutoCreateGaps(true);
+        cardDescriptionLayout.setAutoCreateContainerGaps(true);
+        cardDescriptionLayout.setVerticalGroup(
+                cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addGap(130)
+                        .addComponent(this.deckLabel)
+        );
+        cardDescriptionLayout.setHorizontalGroup(
+                cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addGap(75)
+                        .addComponent(this.deckLabel)
+        );
+        setSelected(false);
+        this.revalidate();
+        this.repaint();
+    }
+
+    public void setSelected(boolean isSelected){
+        if(this.chara!=null && isSelected) {
             this.setBackground(new java.awt.Color(217, 234, 211));
             this.attackPanel.setBackground(new java.awt.Color(217, 234, 211));
             this.healthPanel.setBackground(new java.awt.Color(217, 234, 211));
             Border border = BorderFactory.createLineBorder(new java.awt.Color(251, 180, 84));
+            this.setBorder(border);
+        }
+        else if(!isSelected){
+            this.setBackground(new java.awt.Color(200, 200, 200));
+            this.attackPanel.setBackground(new java.awt.Color(200, 200, 200));
+            this.healthPanel.setBackground(new java.awt.Color(200, 200, 200));
+            Border border = BorderFactory.createLineBorder(Color.BLACK);
             this.setBorder(border);
         }
     }
