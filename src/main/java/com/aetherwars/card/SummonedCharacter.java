@@ -80,7 +80,7 @@ public class SummonedCharacter implements Summoned, Publisher {
           this.maxHealth = this.health;
         }
     }
-    public Card getBaseCard(){
+    public Character getBaseCard(){
         return this.charCard;
     }
     public void attack(SummonedCharacter summonedCharacter){

@@ -1,6 +1,7 @@
 package com.aetherwars.card.spell;
 
 import com.aetherwars.card.Character.Character;
+import com.aetherwars.card.SummonedCharacter;
 
 public class PotionSpell extends Spell {
     private int attack;
@@ -39,7 +40,7 @@ public class PotionSpell extends Spell {
     }
 
     @Override
-    public void use(Character target) {
+    public void use(SummonedCharacter target) {
         /* PTN / Potion (TEMP):
         Meningkatkan atribut attack dan / atau health.
         Penambahan ini dapat bernilai 0 bahkan negatif.

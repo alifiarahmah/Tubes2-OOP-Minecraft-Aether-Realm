@@ -1,6 +1,7 @@
 package com.aetherwars.model;
 import com.aetherwars.card.Card;
 import com.aetherwars.card.Character.Character;
+import com.aetherwars.card.SummonedCharacter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class Player {
         }
         this.isDeckEmpty = true;
     }
-    public void attack(Player p,Character c_self,Character c_enemy){
+    public void attack(Player p, SummonedCharacter c_self, SummonedCharacter c_enemy){
         if(c_enemy!=null){
             //ada karakter di board lawan
             //hanya bisa serang karakter

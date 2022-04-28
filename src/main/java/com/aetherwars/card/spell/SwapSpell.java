@@ -1,6 +1,7 @@
 package com.aetherwars.card.spell;
 
 import com.aetherwars.card.Character.Character;
+import com.aetherwars.card.SummonedCharacter;
 
 public class SwapSpell extends Spell {
     private int duration;
@@ -19,8 +20,8 @@ public class SwapSpell extends Spell {
     }
 
     @Override
-    public void use(Character target) {
-        /* SWAP (TEMP): Menukar attack dan health. 
+    public void use(SummonedCharacter target) {
+        /* SWAP (TEMP): Menukar attack dan health.
         Khusus untuk swap, apabila digunakan pada karakter yang telah memiliki efek swap 
         maka durasinya yang akan bertambah, dan bukan dilakukan swap balik. 
         Perhatikan: apabila sebelum swap attack suatu karakter adalah 0, maka setelah swap, karakter tersebut mati. */

@@ -6,6 +6,7 @@ package com.aetherwars.view;
 
 import com.aetherwars.GUI.Components.*;
 import com.aetherwars.card.Character.Type;
+import com.aetherwars.card.SummonedCharacter;
 import com.aetherwars.controller.BoardController;
 import com.aetherwars.card.Character.Character;
 import com.aetherwars.card.Character.Type;
@@ -54,7 +55,7 @@ public class Frame extends javax.swing.JFrame {
         player1Picture = new PlayerPicture("/com/aetherwars/card/image/Player/Steve.png");
         deck_A_player1 = new PlayerDeckCard("A");
         deck_C_player1 = new PlayerDeckCard("C");
-        deck_C_player1.addCharacter(null);
+        deck_C_player1.addCharacter(new SummonedCharacter(new Character(1,"Enderman",100,"Penghuni The End","/com/aetherwars/card/image/character/Enderman.png", com.aetherwars.card.Character.Type.END,10,2,12,2),2));
         deck_B_player1 = new PlayerDeckCard("B");
         deck_D_player1 = new PlayerDeckCard("D");
         deck_E_player1 = new PlayerDeckCard("E");
@@ -88,7 +89,7 @@ public class Frame extends javax.swing.JFrame {
         pnl_south_center = new javax.swing.JPanel();
         pnl_card_preview = new CardPreviewPanel("/com/aetherwars/card/image/character/Sheep.png");
         pnl_south_east = new javax.swing.JPanel();
-        pnl_card_description = new CardDescriptionPanel(new Character(1,"Enderman",100,"Penghuni The End","/com/aetherwars/card/image/character/Enderman.png", com.aetherwars.card.Character.Type.END,10,2,12,2));
+        pnl_card_description = new CardDescriptionPanel(new SummonedCharacter(new Character(1,"Enderman",100,"Penghuni The End","/com/aetherwars/card/image/character/Enderman.png", com.aetherwars.card.Character.Type.END,10,2,12,2),2));
         jPanel2 = new javax.swing.JPanel();
         cardDeckPanel = new CardDeckPanel(20,60);
         filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5), new java.awt.Dimension(0, 5));

@@ -1,6 +1,7 @@
 package com.aetherwars.GUI.Components;
 
 import com.aetherwars.card.Character.Character;
+import com.aetherwars.card.SummonedCharacter;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -10,7 +11,7 @@ import java.io.File;
 import java.net.URL;
 
 public class PlayerDeckCard extends JPanel {
-    private Character chara;
+    private SummonedCharacter chara;
     private String deckNumber;
     public javax.swing.GroupLayout cardDescriptionLayout;
     //kalau gak ada kartu
@@ -21,9 +22,12 @@ public class PlayerDeckCard extends JPanel {
     private JLabel attackLabel;
     private JLabel healthLabel;
     private ImageIcon sprite;
+    private JLabel spriteLabel;
     private JLabel levelLabel;
     private JLabel attackIconLabel;
     private JLabel healthIconLabel;
+    private JPanel attackPanel;
+    private JPanel healthPanel;
     public PlayerDeckCard(String deckNumber){
         cardDescriptionLayout = new GroupLayout(this);
         this.setLayout(cardDescriptionLayout);
@@ -44,27 +48,52 @@ public class PlayerDeckCard extends JPanel {
                         .addComponent(this.deckLabel)
         );
     }
-    public void addCharacter(Character c){
+    public void addCharacter(SummonedCharacter c){
         this.chara = c;
         this.cardDescriptionLayout.removeLayoutComponent(this.deckLabel);
         this.attackIcon = loadAsset("/com/aetherwars/card/image/icon/attack.png",15,15);
         this.attackIconLabel = new JLabel(this.attackIcon);
         this.healthIcon = loadAsset("/com/aetherwars/card/image/icon/health.png",15,15);
         this.healthIconLabel = new JLabel(this.healthIcon);
+        this.attackLabel = new JLabel(Integer.toString(c.getAttack()));
+        this.healthLabel = new JLabel(Float.toString(c.getHealth()));
+        this.sprite = loadAsset(c.getBaseCard().getImagepath(),80,100);
+        this.spriteLabel = new JLabel(this.sprite);
+        this.levelLabel = new JLabel(c.getExp()+"/"+c.getMaxExpToNextLevel()+" ["+c.getLevel()+"]");
+
+        javax.swing.GroupLayout attackLayout = new GroupLayout(this);
+        this.attackPanel.setLayout(attackLayout);
+        attackLayout.setAutoCreateGaps(true);
+        attackLayout.setAutoCreateContainerGaps(true);
+
+        attackLayout.setVerticalGroup(
+                attackLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addComponent(this.attackIconLabel)
+                        .addComponent(this.attackLabel)
+        );
+
+
         cardDescriptionLayout.setVerticalGroup(
                 cardDescriptionLayout.createSequentialGroup()
-                        .addGroup(cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                       // .addGroup(cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
                                 .addComponent(this.attackIconLabel)
+                                .addComponent(this.attackLabel)
                                 .addComponent(this.healthIconLabel)
-                        )
+                        .addComponent(this.healthLabel)
+                        .addComponent(this.spriteLabel)
+                        .addComponent(this.levelLabel)
+                        //)
 
         );
         cardDescriptionLayout.setHorizontalGroup(
                 cardDescriptionLayout.createParallelGroup(GroupLayout.Alignment.CENTER)
-                        .addGap(75)
-                        .addComponent(this.attackIconLabel).addGap(75)
-
+                        .addComponent(this.attackIconLabel)
+                        .addComponent(this.attackLabel)
                         .addComponent(this.healthIconLabel)
+                        .addComponent(this.healthLabel)
+                        .addComponent(this.spriteLabel)
+                        .addComponent(this.levelLabel)
+                        .addGap(30)
         );
         this.revalidate();
         this.repaint();
