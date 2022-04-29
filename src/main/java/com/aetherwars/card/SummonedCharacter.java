@@ -18,6 +18,7 @@ public class SummonedCharacter implements Summoned, Publisher {
     private int level;
     private int exp;
     private int maxExpToNextLevel;
+    private boolean hasAttacked;
     private List<SummonedSpell> activeSpells;
     
     BoardChannel channel;
@@ -32,6 +33,7 @@ public class SummonedCharacter implements Summoned, Publisher {
         this.exp = 0;
         this.maxExpToNextLevel = 1;
         this.activeSpells = new ArrayList<SummonedSpell>();
+        this.hasAttacked = false;
     }
     public int getAttack(){
         return this.attack;
@@ -69,7 +71,9 @@ public class SummonedCharacter implements Summoned, Publisher {
     public List<SummonedSpell> getActiveSpells(){
         return this.activeSpells;
     }
-
+    public void setHasAttacked(){
+        this.hasAttacked = !this.hasAttacked; // Jadiin opposite
+    }
     public void levelUp(){
     while (this.exp >= this.maxExpToNextLevel){
           this.level += 1;
@@ -141,9 +145,11 @@ public class SummonedCharacter implements Summoned, Publisher {
             default: 
                 summonedCharacter.setHealth(health - this.attack);
         }
+        this.hasAttacked = true;
     }
     public void attack(Player player){
         player.setHP(player.getHP() - this.attack);
+        this.hasAttacked = true;
         if (player.getHP() <= 0) {
             // END GAME
         }
