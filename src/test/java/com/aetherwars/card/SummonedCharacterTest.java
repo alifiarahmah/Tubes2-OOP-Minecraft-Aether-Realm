@@ -2,13 +2,12 @@ package com.aetherwars.card;
 
 import com.aetherwars.card.Character.Character;
 import com.aetherwars.card.Character.Type;
-import com.aetherwars.card.SummonedCharacter;
-import com.aetherwars.model.Player;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SummonedCharacterTest extends TestCase {
+import static junit.framework.TestCase.assertEquals;
+
+public class SummonedCharacterTest {
     private SummonedCharacter summonedCharacter;
     private SummonedCharacter summonedCharacterOverworld;
     private SummonedCharacter summonedCharacterNether;
