@@ -3,7 +3,12 @@
 Here is an example of project using gradle as the build tools.
 Try running these commands:
 
+# Cara Compile dan Menjalankan Program
+Untuk melakukan kompilasi buka terminal lalu menuju folder root dari 
+aplikasi ini, kemudian tuliskan:
+
 `./gradlew run`
+
 
 You will notice that it will open a window that display 'Minecraft: Aether Wars'.
 In the command line you can see the data that is being read by `CSVReader.java`
