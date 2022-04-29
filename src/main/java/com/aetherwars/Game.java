@@ -56,7 +56,7 @@ public class Game implements Publisher, Subscriber{
     
     public void stageController(Phase phase){
         if(phase == Phase.DRAW){
-            // draw
+            this.draw();
         }else if (phase == Phase.END){
             // end phase
         }
@@ -64,9 +64,17 @@ public class Game implements Publisher, Subscriber{
     
     public void draw() {
     	// manggil draw()
-        publish(new EnterDrawPhaseEvent());
+        // publish(new PhaseChangedEvent(this.phases[phase_id]));
+        Card c1 = this.deck[cur_player].drawCard();
+        Card c2 = this.deck[cur_player].drawCard();
+        Card c3 = this.deck[cur_player].drawCard();
+        publish(new EnterDrawPhaseEvent(c1, c2, c3));
     }
     
+    public void endStage(){
+        this.cur_player = (this.cur_player+1)%2;
+        publish(new PlayerChangedEvent(this.cur_player) );
+    }
     public void solveBattle() {
     	
     }
@@ -75,6 +83,7 @@ public class Game implements Publisher, Subscriber{
     	// kalo kartu di tangan musuh abis
     	return this.players[(cur_player+1)%2].getIsDeckEmpty();
     }
+    
     @Override
     public void onEvent(Event event){
         // kalo eventnya PhaseChangeEvent
