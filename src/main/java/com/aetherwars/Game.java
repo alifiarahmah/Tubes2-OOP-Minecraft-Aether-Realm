@@ -64,6 +64,7 @@ public class Game implements Publisher, Subscriber{
     
     public void draw() {
     	// manggil draw()
+        publish(new EnterDrawPhaseEvent());
     }
     
     public void solveBattle() {
