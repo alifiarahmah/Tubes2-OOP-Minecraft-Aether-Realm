@@ -3,7 +3,6 @@ package com.aetherwars.card.spell;
 import com.aetherwars.card.Character.Character;
 import com.aetherwars.card.Character.Type;
 import com.aetherwars.card.SummonedCharacter;
-import org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
