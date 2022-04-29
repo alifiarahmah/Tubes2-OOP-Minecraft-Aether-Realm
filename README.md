@@ -1,6 +1,7 @@
 # IF2210 Minecraft Aether Wars
 
 ## Struktur Progran
+```
 src
 |-- main
     |--java
@@ -13,6 +14,7 @@ src
             |-model
             |-util
             |-view
+```
 ## Cara Compile dan Menjalankan Program
 Untuk melakukan kompilasi buka terminal lalu menuju folder root dari 
 aplikasi ini, kemudian tuliskan:
