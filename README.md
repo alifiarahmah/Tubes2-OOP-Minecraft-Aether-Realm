@@ -2,34 +2,52 @@
 
 ## Struktur Progran
 ```
-src
-|-- main
-    |--java
-       |--com
-          |-aetherwars
-            |-GUI
-              |--Components
-            |-card
-              |--Character
-              |--spell
-            |-controller
-            |-event
-            |-model
-            |-util
-            |-view
-   |--resources
-      |--com
-         |--aetherwars
-            |--card
-               |--data
-               |--image
-                  |--Player
-                  |--character
-                  |--icon
-                  |--spell
-                     |--morph
-                     |--potion
-                     |--swap
+.
+└── Minecraft-Aether-Realm/
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/com/aetherwars/
+    │   │   │   ├── GUI/
+    │   │   │   │   ├── Components
+    │   │   │   │   └── GUI.java
+    │   │   │   ├── card/
+    │   │   │   │   ├── Character
+    │   │   │   │   ├── Spell
+    │   │   │   │   ├── Card.java
+    │   │   │   │   ├── Deck.java
+    │   │   │   │   ├── Summonable.java
+    │   │   │   │   └── Summoned.java
+    │   │   │   ├── controller/
+    │   │   │   │   └── BoardController.java
+    │   │   │   ├── event
+    │   │   │   ├── model/
+    │   │   │   │   ├── Phase.java
+    │   │   │   │   └── Player.java
+    │   │   │   ├── util/
+    │   │   │   │   └── CSVReader.java
+    │   │   │   ├── view/
+    │   │   │   │   └── Frame.java
+    │   │   │   ├── AetherWars.java
+    │   │   │   └── Game.java
+    │   │   └── resources/com/aetherwars/card/
+    │   │       ├── data/
+    │   │       │   ├── character.csv
+    │   │       │   ├── spell_morph.csv
+    │   │       │   ├── spell_ptn.csv
+    │   │       │   └── spell_swap.csv
+    │   │       └── image/
+    │   │           ├── Player
+    │   │           ├── character
+    │   │           ├── icon
+    │   │           └── spell/
+    │   │               ├── morph
+    │   │               ├── potion
+    │   │               └── swap
+    │   └── test/java/com/aetherwars/card/
+    │       ├── spell/
+    │       │   └── LevelSpellTest.java
+    │       └── SummonedCharacterTest.java
+    └── README.md
 ```
 ## Cara Compile dan Menjalankan Program
 Untuk melakukan kompilasi buka terminal lalu menuju folder root dari 
@@ -37,9 +55,9 @@ aplikasi ini, kemudian tuliskan:
 
 `./gradlew run`
 
-
-
 ## Screenshot Program
+
+![screenshot](docs/Screenshot.png)
 
 ## Credit
 
