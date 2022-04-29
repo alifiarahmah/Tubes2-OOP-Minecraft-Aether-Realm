@@ -8,12 +8,28 @@ src
        |--com
           |-aetherwars
             |-GUI
+              |--Components
             |-card
+              |--Character
+              |--spell
             |-controller
             |-event
             |-model
             |-util
             |-view
+   |--resources
+      |--com
+         |--aetherwars
+            |--card
+               |--data
+               |--image
+                  |--Player
+                  |--character
+                  |--icon
+                  |--spell
+                     |--morph
+                     |--potion
+                     |--swap
 ```
 ## Cara Compile dan Menjalankan Program
 Untuk melakukan kompilasi buka terminal lalu menuju folder root dari 
